@@ -1,0 +1,6 @@
+date_added,handle,status,intake_score,weekly_value_score,value_label,topic_fit,evidence_1,evidence_2,last_review,next_review,notes
+2026-03-03,gabor,candidate,6,,C,agentic engineering,https://x.com/gabor/status/2028647269063708724,,2026-03-06,2026-03-09,high-signal synthesis; evaluate for consistency
+2026-03-03,togethercompute,candidate,7,,C,llm evals/coding benchmarks,https://x.com/togethercompute/status/2026738061376368879,,2026-03-06,2026-03-09,strong benchmark/open-data signal; org account keep under watch
+2026-03-04,peterbhase,candidate,7,,B,llm evals / model honesty,https://x.com/peterbhase/status/2027016366516244516,,2026-03-06,2026-03-10,strong technical eval/interp content
+2026-03-04,nicknisi,candidate,7,,B,agent evals / devtools,https://x.com/nicknisi/status/2027515716409430359,,2026-03-06,2026-03-10,practical eval implementation with production framing
+2026-03-04,mntruell,following,9,9,A,AI coding agents / product execution,https://x.com/mntruell/status/2028903020847841336,https://x.com/mntruell/status/2026377145703084392,2026-03-06,2026-03-13,high-signal primary source from Cursor CEO; promote directly

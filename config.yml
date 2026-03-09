@@ -1,0 +1,28 @@
+# RSS Feed Configuration
+# Edit these settings to customize your AI Development Pulse RSS feed
+
+feed:
+  title: "AI Development Pulse"
+  description: "Daily insights and analysis on AI development trends, tools, and breakthroughs"
+  author: "Aaron Henningsgaard"
+  language: "en-us"
+  
+# GitHub Pages settings
+site:
+  base_url: "https://yourusername.github.io/ai-pulse-feed"  # Change 'yourusername' to your GitHub username
+  
+# Content settings  
+content:
+  blog_directory: "daily-blog"
+  max_posts: 50  # Maximum number of posts to include in RSS feed (newest first)
+  
+# Email settings (for RSS feed metadata)
+contact:
+  email: "noreply@example.com"  # Change to your preferred contact email
+  
+# Optional: Custom categories/tags
+# categories:
+#   - "AI Development"
+#   - "Machine Learning" 
+#   - "Development Tools"
+#   - "Research"

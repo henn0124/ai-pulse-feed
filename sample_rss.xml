@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>AI Development Pulse</title>
+    <description>Daily insights and analysis on AI development trends, tools, and breakthroughs</description>
+    <link>https://username.github.io/ai-pulse-feed</link>
+    <language>en-us</language>
+    <managingEditor>noreply@example.com (Aaron Henningsgaard)</managingEditor>
+    <webMaster>noreply@example.com (Aaron Henningsgaard)</webMaster>
+    <lastBuildDate>Sun, 09 Mar 2026 18:12:00 +0000</lastBuildDate>
+    <atom:link href="https://username.github.io/ai-pulse-feed/rss.xml" rel="self" type="application/rss+xml"/>
+    
+    <item>
+      <title>AI Development Pulse - March 9, 2026</title>
+      <description><![CDATA[
+        <h2>The Rise of Autonomous AI Research</h2>
+        <p>Andrej Karpathy is pushing the boundaries of automated research with his "autoresearch" project - a vision that goes far beyond emulating a single PhD student to creating "asynchronously massively collaborative" research communities of AI agents. His latest experiments involve multiple agents (Claude and Codex) running parallel nanochat experiments, each with their own GPU. While he admits "it doesn't work and it's a mess," the potential is staggering.</p>
+        
+        <p>The technical progress is equally impressive: nanochat now trains GPT-2 capability models in just 2 hours on 8XH100 (down from 3 hours a month ago), approaching truly interactive training cycles.</p>
+        
+        <h2>Cursor's Always-On Agent Revolution</h2>
+        <p>Cursor made several major announcements that signal a shift toward persistent, autonomous development:</p>
+        
+        <p>- <strong>GPT 5.4 integration</strong>: More natural and assertive than previous models, leading Cursor's internal benchmarks<br/>
+        - <strong>Cursor Automations</strong>: Always-on agents that continuously monitor and improve codebases based on custom triggers and instructions<br/>
+        - <strong>JetBrains expansion</strong>: Now available through the Agent Client Protocol<br/>
+        - <strong>MCP Apps</strong>: Agents can render interactive UIs directly in conversations</p>
+        
+        <p>This represents a fundamental shift from on-demand assistance to continuous, autonomous development partnership.</p>
+        
+        <h2>The Agentic Engineering Reality Check</h2>
+        <p>Simon Willison continues to be one of the sharpest observers of practical AI development patterns. His recent insights reveal:</p>
+        
+        <p>- <strong>The "boring tech" prediction is failing</strong>: Latest AI models don't seem to favor over-represented technologies when paired with good coding agents<br/>
+        - <strong>Agentic manual testing</strong>: A new pattern where agents "manually" test code to catch issues automated tests miss<br/>
+        - <strong>Anti-patterns emerge</strong>: The biggest sin is "inflicting unreviewed code on collaborators" - dumping massive PRs without verification</p>
+      ]]></description>
+      <link>https://username.github.io/ai-pulse-feed/posts/2026-03-09.html</link>
+      <guid>https://username.github.io/ai-pulse-feed/posts/2026-03-09.html</guid>
+      <pubDate>Sun, 09 Mar 2026 00:00:00 +0000</pubDate>
+      <author>noreply@example.com (Aaron Henningsgaard)</author>
+    </item>
+    
+    <item>
+      <title>AI Development Pulse - March 8, 2026</title>
+      <description><![CDATA[
+        <p>Daily insights and analysis on AI development trends, tools, and breakthroughs from March 8th, 2026.</p>
+      ]]></description>
+      <link>https://username.github.io/ai-pulse-feed/posts/2026-03-08.html</link>
+      <guid>https://username.github.io/ai-pulse-feed/posts/2026-03-08.html</guid>
+      <pubDate>Sat, 08 Mar 2026 00:00:00 +0000</pubDate>
+      <author>noreply@example.com (Aaron Henningsgaard)</author>
+    </item>
+    
+    <item>
+      <title>AI Development Pulse - March 7, 2026</title>
+      <description><![CDATA[
+        <p>Daily insights and analysis on AI development trends, tools, and breakthroughs from March 7th, 2026.</p>
+      ]]></description>
+      <link>https://username.github.io/ai-pulse-feed/posts/2026-03-07.html</link>
+      <guid>https://username.github.io/ai-pulse-feed/posts/2026-03-07.html</guid>
+      <pubDate>Fri, 07 Mar 2026 00:00:00 +0000</pubDate>
+      <author>noreply@example.com (Aaron Henningsgaard)</author>
+    </item>
+    
+  </channel>
+</rss>
