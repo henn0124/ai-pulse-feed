@@ -1,0 +1,54 @@
+name: Build and Deploy Jekyll Blog
+
+on:
+  push:
+    branches: [ master, main ]
+    paths:
+      - '_posts/**'
+      - '_layouts/**'
+      - '_config.yml'
+      - 'index.md'
+      - 'archive.md'
+      - 'Gemfile'
+  schedule:
+    # Run daily at 3 PM UTC to check for new posts
+    - cron: '0 15 * * *'
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+      
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+      
+    - name: Setup Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: '3.1'
+        bundler-cache: true
+        
+    - name: Install dependencies
+      run: |
+        bundle install
+        
+    - name: Build Jekyll site
+      run: |
+        bundle exec jekyll build --destination ./_site
+        
+    - name: Setup Pages
+      uses: actions/configure-pages@v4
+      
+    - name: Upload artifact
+      uses: actions/upload-pages-artifact@v3
+      with:
+        path: ./_site
+        
+    - name: Deploy to GitHub Pages
+      id: deployment
+      uses: actions/deploy-pages@v4
