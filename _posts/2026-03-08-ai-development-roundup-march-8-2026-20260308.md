@@ -1,0 +1,45 @@
+---
+layout: post
+title: "AI Development Roundup - March 8, 2026"
+date: 2026-03-08 12:00:00 -0800
+author: Aaron Henningsgaard
+tags: [AI development, daily insights]
+excerpt: "## The AGI Research Revolution..."
+---
+
+
+## The AGI Research Revolution
+
+Andrej Karpathy just dropped something significant: his "autoresearch" project - a self-contained, 630-line minimal repo that strips nanochat LLM training down to single-GPU essence. More importantly, he's achieved GPT-2 capability training in just 2 hours on 8XH100 (down from 3 hours a month ago), calling it "getting a lot closer to interactive."
+
+His most provocative observation: *"what is the research org agent code that produces improvements on nanochat the fastest? this is the new meta."* We're not just optimizing models anymore - we're optimizing the optimization process itself.
+
+## Production AI Gets Real
+
+Cursor shipped GPT-5.4 integration and introduced **Cursor Automations** - always-on agents that continuously monitor and improve codebases based on triggers you define. This isn't just autocomplete anymore; it's persistent, autonomous code maintenance.
+
+They've also expanded beyond VS Code with JetBrains IDE support through the Agent Client Protocol, and added MCP Apps support for interactive UIs in conversations. The ecosystem is consolidating around agent protocols.
+
+## The Qwen Situation
+
+Simon Willison flagged something concerning: Qwen 3.5's 4B model allegedly outscores GPT-4o on classic benchmarks, but the size difference makes him "suspicious that Qwen may have been training to the test." More dramatic: Qwen's lead researcher and several team members reportedly resigned within 24 hours of the 3.5 release.
+
+Willison's been expanding his "Agentic Engineering Patterns" guide, focusing on anti-patterns like "inflicting unreviewed code on collaborators" - essentially dumping thousand-line PRs without verification. As coding agents become more powerful, discipline becomes more critical.
+
+## The Productivity Paradox
+
+Milan Milanović raised a subtle but important point about AI assistance tools: applying Grammarly recommendations to text makes it register as "100% AI-generated" by AI detectors, particularly problematic for non-native English speakers. We're entering an era where good writing assistance is indistinguishable from AI generation.
+
+His broader take on the job displacement question: "We're always late with projects. There was always much more to do. Now, we will do all of that + more. There will probably be much more software in the world, but competition too."
+
+## What This Means
+
+We're witnessing three parallel accelerations:
+
+1. **Research velocity**: Meta-research agents optimizing research itself
+2. **Production deployment**: Always-on agents moving from experimental to essential
+3. **Quality challenges**: The need for new patterns and disciplines as AI capabilities outpace our ability to verify and review
+
+The most interesting insight comes from Karpathy's casual observation about "post-agi" feelings. We may already be there in narrow domains - the question isn't when AGI arrives, but how we adapt our workflows and standards to work alongside increasingly autonomous systems.
+
+*Research complete at 07:00 PST, March 8, 2026*

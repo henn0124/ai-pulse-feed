@@ -1,0 +1,44 @@
+---
+layout: post
+title: "Daily AI Dev Tweet Brief - March 3, 2026"
+date: 2026-03-03 12:00:00 -0800
+author: Aaron Henningsgaard
+tags: [AI development, agentic coding, security review, governance, production guardrails]
+excerpt: "Agentic coding becomes a software process problem as security review emerges as the new bottleneck. Trust and verification are now the key challenges."
+---
+
+## What mattered in the last 24–48h
+
+The strongest signal across Tier 1 accounts is that **agentic coding is now a software process problem, not a model novelty problem**.
+
+- **@cursor_ai** is pushing this operationally: Bugbot Autofix for PR issues, "demos not diffs," and more claims of production work being handled by agents in sandboxes. ([Bugbot Autofix](https://x.com/cursor_ai/status/2027079876948484200), [Demos not diffs](https://x.com/cursor_ai/status/2026369873321013568), [1/3 PRs from sandboxed agents](https://x.com/cursor_ai/status/2026369876793897185), [How sandboxes were built](https://x.com/cursor_ai/status/2024544628687687879))
+- **@karpathy** reinforces the behavior shift from autocomplete to agent workflows (and increasingly parallel agents), framing recent progress as a real discontinuity in daily programming practice. ([Programming changed in last 2 months](https://x.com/karpathy/status/2026731645169185220), [Tab → Agent → Parallel agents](https://x.com/karpathy/status/2027501331125239822), [8-agent coding experiment](https://x.com/karpathy/status/2027521323275325622))
+- **@simonw** adds the critical counterweight: if shipping velocity is now amplified by agents, **security review becomes the new hard constraint**. ([Security as the key lens](https://x.com/simonw/status/2028840346617065573), [Security teams at scale thread](https://x.com/simonw/status/2028838538825924803), [Request for robust-review references](https://x.com/simonw/status/2028839583610216503))
+- **@milan_milanovic** echoes reliability concerns with a high-visibility story about an AI coding tool deleting/rebuilding production, and argues quality still depends heavily on human framing/editing. ([Kiro production deletion incident](https://x.com/milan_milanovic/status/2028394885028671589), [Reliability of vibe-coded solutions](https://x.com/milan_milanovic/status/2028486295048339679), [Human editing vs LLM slop](https://x.com/milan_milanovic/status/2028803272304132316))
+
+## Insight
+
+We're entering a phase where competitive advantage is less about having "an AI coding assistant" and more about the **governance layer around autonomous code generation**:
+
+1. Sandbox boundaries
+2. Security review throughput
+3. Production guardrails and rollback discipline
+4. Human-in-the-loop editorial control for both code and technical writing
+
+In short: **agents are accelerating the front of the pipeline; trust and verification are now the bottleneck.**
+
+## Follow Candidates (daily intake)
+
+- **@peterbhase** — strong technical research signal on LLM honesty/lie-detection evals with concrete methods.
+  - Evidence: [orthogonal truthfulness directions paper thread](https://x.com/peterbhase/status/2027016366516244516)
+  - Provisional score: **7/10**
+  - Action: `candidate`
+
+- **@nicknisi** — practical, production-style eval implementation for AI agents across many frameworks.
+  - Evidence: [built two eval systems for AuthKit agent behavior](https://x.com/nicknisi/status/2027515716409430359)
+  - Provisional score: **7/10**
+  - Action: `candidate`
+
+## Accounts monitored
+
+@karpathy · @cursor_ai · @simonw · @milan_milanovic

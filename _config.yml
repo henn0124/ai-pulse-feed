@@ -1,0 +1,62 @@
+# Site settings
+title: AI Development Pulse
+email: aaron@example.com
+description: >-
+  Daily insights and analysis on AI development trends, tools, and breakthroughs.
+  Follow the pulse of AI development from the trenches.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://username.github.io/ai-pulse-feed" # the base hostname & protocol for your site
+
+# Author settings
+author:
+  name: Aaron Henningsgaard
+  email: aaron@example.com
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Permalink structure
+permalink: /:year/:month/:day/:title/
+
+# Collections
+collections:
+  posts:
+    output: true
+
+# Pagination
+paginate: 10
+paginate_path: "/page:num/"
+
+# RSS Feed settings
+feed:
+  posts_limit: 20
+  excerpt_only: false
+
+# Timezone
+timezone: America/Los_Angeles
+
+# Exclude from processing
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - generate_rss.py
+  - generate_rss_config.py
+  - sample_rss.xml
+  - setup.sh
+  - daily-blog/
+  - config.yml
+  - SETUP_INSTRUCTIONS.md

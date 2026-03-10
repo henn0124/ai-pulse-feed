@@ -1,258 +1,179 @@
-# AI Development Pulse - RSS Feed Generator
+# AI Development Pulse - Jekyll Blog with RSS Feed
 
-This system automatically converts your daily AI development blog posts from markdown files into a proper RSS 2.0 feed that can be hosted on GitHub Pages.
-
-## 🚀 Quick Start
-
-### 1. Create GitHub Repository
-
-1. Go to [GitHub](https://github.com) and create a new public repository
-2. Name it `ai-pulse-feed` (or your preferred name)
-3. Initialize with README (optional)
-
-### 2. Upload Files
-
-Clone your new repo and copy these files:
-```bash
-git clone https://github.com/yourusername/ai-pulse-feed.git
-cd ai-pulse-feed
-
-# Copy these files from your current workspace:
-# - generate_rss.py
-# - index.html  
-# - daily-blog/ (entire directory)
-# - README.md (this file)
-```
-
-### 3. Enable GitHub Pages
-
-1. Go to your repo on GitHub
-2. Click **Settings** → **Pages**
-3. Under **Source**, select **"Deploy from a branch"**
-4. Choose **"main"** branch and **"/ (root)"**
-5. Click **Save**
-
-Your RSS feed will be available at: `https://yourusername.github.io/ai-pulse-feed/rss.xml`
-
-## 📁 File Structure
-
-```
-ai-pulse-feed/
-├── generate_rss.py          # Main RSS generator script
-├── index.html               # Landing page for the RSS feed
-├── rss.xml                  # Generated RSS feed (created by script)
-├── daily-blog/              # Your markdown blog posts
-│   ├── 2026-02-28.md
-│   ├── 2026-03-01.md
-│   └── ...
-└── README.md                # This file
-```
-
-## ⚙️ Usage
-
-### Generate RSS Feed
-
-Run the Python script to generate/update your RSS feed:
-
-```bash
-python3 generate_rss.py
-```
-
-This will:
-- Scan all `.md` files in the `daily-blog/` directory
-- Extract titles, dates, and content 
-- Generate `rss.xml` with proper RSS 2.0 format
-- Sort posts by date (newest first)
-
-### Automation Options
-
-#### Option 1: Manual Updates
-Run the script manually whenever you add new blog posts, then commit and push:
-
-```bash
-python3 generate_rss.py
-git add rss.xml
-git commit -m "Update RSS feed"
-git push
-```
-
-#### Option 2: GitHub Actions (Recommended)
-
-Create `.github/workflows/update-rss.yml`:
-
-```yaml
-name: Update RSS Feed
-
-on:
-  push:
-    paths:
-      - 'daily-blog/*.md'
-  schedule:
-    - cron: '0 15 * * *'  # Run daily at 3 PM UTC
-
-jobs:
-  update-rss:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      
-      - name: Set up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.9'
-      
-      - name: Generate RSS feed
-        run: python3 generate_rss.py
-      
-      - name: Commit and push RSS feed
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git add rss.xml
-          git diff --staged --quiet || git commit -m "Auto-update RSS feed"
-          git push
-```
+This is a Jekyll-powered blog that provides both individual post pages AND RSS feed functionality for daily AI development insights. The best of both worlds - people can read posts on the web OR subscribe to the RSS feed.
 
 ## 🎯 Features
 
-### RSS Generator (`generate_rss.py`)
-- **Multiple title formats**: Handles both "Daily AI Dev Insights" and "AI Development Pulse" formats
-- **Markdown to HTML**: Converts markdown formatting to HTML for RSS readers
-- **Proper RSS 2.0**: Includes all required RSS elements and metadata
-- **Date parsing**: Extracts dates from filenames or content
-- **Error handling**: Continues processing even if individual files have issues
+- **Jekyll Blog**: Individual post pages at clean URLs (`/YYYY/MM/DD/title/`)
+- **RSS Feed**: Full RSS 2.0 feed for feed readers (`/feed.xml`)
+- **Archive Page**: Chronological listing of all posts
+- **Responsive Design**: Mobile-friendly, clean aesthetic
+- **GitHub Pages**: Automatic building and deployment
+- **SEO Friendly**: Proper meta tags and sitemaps
 
-### Landing Page (`index.html`)
-- **Professional design**: Clean, responsive interface
-- **Direct subscribe links**: One-click subscription to popular RSS readers
-- **RSS URL copying**: Easy copy-to-clipboard functionality
-- **Feed information**: Clear instructions and feed statistics
+## 🚀 Live Site
 
-### RSS Feed Features
-- **Standard RSS 2.0 format**
-- **Proper CDATA encoding** for HTML content
-- **Unique GUIDs** for each post
-- **Publication dates** extracted from post metadata
-- **Author attribution**
-- **Self-referencing atom:link**
+- **Blog**: https://yourusername.github.io/ai-pulse-feed/
+- **RSS Feed**: https://yourusername.github.io/ai-pulse-feed/feed.xml
 
-## 🔧 Configuration
+## 📝 Adding New Posts
 
-### Customize Feed Metadata
+Create markdown files in `_posts/` directory with this format:
 
-Edit `generate_rss.py` to customize your feed:
+**Filename**: `YYYY-MM-DD-title-with-dashes.md`
 
-```python
-class RSSGenerator:
-    def __init__(self, blog_dir="daily-blog", base_url="https://yourusername.github.io/ai-pulse-feed"):
-        self.blog_dir = Path(blog_dir)
-        self.base_url = base_url  # Change this to your actual GitHub Pages URL
-        self.feed_title = "AI Development Pulse"  # Your feed title
-        self.feed_description = "Daily insights and analysis..."  # Your description
-        self.feed_author = "Aaron Henningsgaard"  # Your name
+**Content**:
+```yaml
+---
+layout: post
+title: "AI Development Pulse - March 10, 2026"
+date: 2026-03-10 12:00:00 -0800
+author: Aaron Henningsgaard
+tags: [AI development, coding agents, specific-topics]
+excerpt: "Brief description of the post for RSS feeds and previews."
+---
+
+Your markdown content here...
+
+## Section Headers
+
+Regular markdown formatting works perfectly.
+
+- Lists work
+- **Bold text** works
+- Links work: [Example](https://example.com)
 ```
 
-### Update Landing Page
+## 🔧 Local Development
 
-Edit `index.html` to customize:
-- Replace `yourusername` with your actual GitHub username
-- Update the description and about section
-- Modify colors and styling as desired
+### Prerequisites
+- Ruby 3.1+
+- Bundler gem (`gem install bundler`)
 
-## 📱 RSS Reader Integration
+### Setup
+```bash
+# Clone repository
+git clone https://github.com/yourusername/ai-pulse-feed.git
+cd ai-pulse-feed
 
-Your RSS feed will work with all major RSS readers:
+# Install dependencies
+bundle install
 
-### Desktop Readers
-- **Feedly** - Web-based, most popular
-- **Inoreader** - Feature-rich web reader
-- **NetNewsWire** - Free Mac app
-- **Feedbro** - Browser extension
+# Run local server
+bundle exec jekyll serve
 
-### Mobile Readers
-- **Reeder** (iOS/Mac) - Premium, excellent design
-- **Flipboard** - Magazine-style layout
-- **Feedly** mobile apps
-- **Google News** (supports RSS)
-
-### Developer Tools
-- **curl**: `curl https://yourusername.github.io/ai-pulse-feed/rss.xml`
-- **RSS validators**: Use W3C Feed Validator to test
-
-## 🛠️ Troubleshooting
-
-### Common Issues
-
-1. **Python not found**
-   ```bash
-   # Install Python 3
-   sudo apt update && sudo apt install python3
-   ```
-
-2. **Permission denied**
-   ```bash
-   chmod +x generate_rss.py
-   ```
-
-3. **GitHub Pages not updating**
-   - Check that Pages is enabled in repository settings
-   - Verify the repository is public
-   - Wait 5-10 minutes for deployment
-
-4. **RSS feed not parsing**
-   - Validate your RSS at: https://validator.w3.org/feed/
-   - Check for XML syntax errors
-   - Ensure proper character encoding
-
-### Debug Mode
-
-Add debug output to the generator:
-
-```python
-# Add to main() function
-print(f"Found {len(date_files)} blog posts:")
-for f in date_files:
-    print(f"  - {f.name}")
+# Visit http://localhost:4000
 ```
 
-## 🎨 Customization Ideas
+## 🚀 Deployment
 
-### Enhanced Features
-- **Category tags**: Add categories to RSS items
-- **Full-text search**: Index content for searching
-- **Email subscriptions**: Integrate with email services
-- **Social sharing**: Add share buttons to landing page
-- **Analytics**: Track RSS subscriber count
+The site automatically deploys to GitHub Pages via GitHub Actions when you:
+- Push to the main branch
+- Add/modify posts in `_posts/`
+- Modify layouts or configuration
 
-### Content Enhancements  
-- **Images**: Extract and include images from markdown
-- **Links**: Convert markdown links to HTML
-- **Code blocks**: Preserve code formatting in RSS
-- **Table of contents**: Generate TOC for longer posts
+### GitHub Pages Setup
+1. Go to repository **Settings** → **Pages**
+2. Source: **GitHub Actions**
+3. The workflow handles the rest automatically
 
-## 📊 Analytics
+## 📁 Repository Structure
 
-Track your RSS feed usage:
-- **GitHub Pages**: Basic traffic stats in repository insights
-- **Google Analytics**: Add tracking to `index.html`
-- **RSS analytics services**: FeedBurner, Feedpress, etc.
+```
+ai-pulse-feed/
+├── _config.yml                    # Jekyll configuration
+├── Gemfile                       # Ruby dependencies
+├── _layouts/
+│   ├── default.html             # Base page layout
+│   └── post.html                # Individual post layout
+├── _posts/                      # Blog posts (Jekyll format)
+│   ├── 2026-02-28-daily-ai-dev-insights-february-28-2026.md
+│   ├── 2026-03-01-daily-ai-dev-insights-march-1-2026.md
+│   └── ...
+├── index.md                     # Blog homepage
+├── archive.md                   # Archive page (all posts)
+├── .github/workflows/
+│   └── jekyll-build-and-deploy.yml  # Automated deployment
+├── daily-blog/                 # Original posts (legacy)
+├── generate_rss.py              # Backup RSS generator
+└── JEKYLL_MIGRATION.md          # Migration documentation
+```
+
+## 🔄 RSS Feeds
+
+Two RSS feeds are available:
+
+1. **Primary**: `/feed.xml` - Generated by Jekyll (recommended)
+2. **Backup**: `/rss.xml` - Generated by Python script (legacy)
+
+Both contain the same content. Use the Jekyll feed (`/feed.xml`) for new subscriptions.
+
+## 🎨 Customization
+
+### Styling
+Edit the `<style>` sections in:
+- `_layouts/default.html` - Overall site styling
+- `_layouts/post.html` - Individual post styling
+- `index.md` - Homepage specific styling
+
+### Configuration
+Edit `_config.yml` to change:
+- Site title, description, author
+- URL and baseurl
+- Plugin settings
+- Permalink structure
+
+### Adding Pages
+Create new `.md` files in the root directory with YAML front matter.
+
+## 📊 Content Migration
+
+The repository includes both:
+- **New Jekyll posts** in `_posts/` (primary)
+- **Original posts** in `daily-blog/` (reference)
+
+All content from the original daily blog posts has been converted to Jekyll format with proper front matter.
+
+## 🛠 Troubleshooting
+
+### Build Failures
+- Check Ruby/Jekyll versions in `Gemfile`
+- Ensure YAML front matter is properly formatted
+- Check GitHub Actions logs for specific errors
+
+### RSS Feed Issues
+- The backup Python RSS generator runs if Jekyll feed fails
+- Both feeds should contain the same content
+- Test feeds with an RSS reader
+
+### Local Development Issues
+```bash
+# Clear Jekyll cache
+bundle exec jekyll clean
+
+# Update dependencies
+bundle update
+
+# Verbose build for debugging
+bundle exec jekyll serve --verbose
+```
+
+## 📋 Migration Notes
+
+This repository was migrated from a simple RSS-only setup to a full Jekyll blog. See `JEKYLL_MIGRATION.md` for detailed migration information.
 
 ## 🤝 Contributing
 
-To contribute improvements:
 1. Fork the repository
 2. Create a feature branch
 3. Make your changes
-4. Test with your own blog posts
+4. Test locally with `bundle exec jekyll serve`
 5. Submit a pull request
 
 ## 📄 License
 
-This RSS generator is released under the MIT License. Use freely for personal or commercial projects.
+This project is open source. The blog content and code are available for reference and adaptation.
 
 ---
 
-**Need help?** Open an issue in the GitHub repository or reach out directly.
-
-**RSS Feed URL**: `https://yourusername.github.io/ai-pulse-feed/rss.xml`  
-**Landing Page**: `https://yourusername.github.io/ai-pulse-feed/`
+**Daily AI Development Insights** - Following the pulse of AI development from the trenches.
