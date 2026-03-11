@@ -37,9 +37,16 @@ jobs:
       run: |
         bundle install
         
-    - name: Build Jekyll site
+    - name: Build Jekyll site (strict)
       run: |
-        bundle exec jekyll build --destination ./_site
+        bundle exec jekyll build --strict_front_matter --destination ./_site
+
+    - name: Markdown + link reliability checks
+      run: |
+        # Ensure markdown files with links are well-formed enough for basic parsing
+        grep -R "\[.*\](http" _posts/*.md >/dev/null || { echo "No source links found in posts"; exit 1; }
+        gem install html-proofer --no-document
+        htmlproofer ./_site --disable-external --check-html --enforce-https
         
     - name: Setup Pages
       uses: actions/configure-pages@v4

@@ -20,13 +20,20 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.1'
+          bundler-cache: true
       - name: Setup Pages
         uses: actions/configure-pages@v5
-      - name: Build with Jekyll
-        uses: actions/jekyll-build-pages@v1
-        with:
-          source: ./
-          destination: ./_site
+      - name: Build with Jekyll (strict)
+        run: bundle exec jekyll build --strict_front_matter --destination ./_site
+      - name: Markdown + link reliability checks
+        run: |
+          grep -R "\[.*\](http" _posts/*.md >/dev/null || { echo "No source links found in posts"; exit 1; }
+          gem install html-proofer --no-document
+          htmlproofer ./_site --disable-external --check-html --enforce-https
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
 
