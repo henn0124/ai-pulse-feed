@@ -4,7 +4,7 @@ email: aaron@example.com
 description: >-
   Daily insights and analysis on AI development trends, tools, and breakthroughs.
   Follow the pulse of AI development from the trenches.
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/ai-pulse-feed" # repository name for GitHub project pages
 url: "https://henn0124.github.io/ai-pulse-feed" # the base hostname & protocol for your site
 
 # Author settings

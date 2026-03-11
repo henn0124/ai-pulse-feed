@@ -58,7 +58,7 @@ This blog tracks the rapid evolution of AI development tools and practices throu
 ---
 
 <div style="text-align: center; margin: 40px 0;">
-  <a href="{{ "/archive.html" | relative_url }}" class="nav-links" style="margin-right: 20px;">📚 View All Posts</a>
+  <a href="{{ "/archive/" | relative_url }}" class="nav-links" style="margin-right: 20px;">📚 View All Posts</a>
   <a href="{{ "/feed.xml" | relative_url }}" class="nav-links rss-link">🔗 RSS Feed</a>
 </div>
 

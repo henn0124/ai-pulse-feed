@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Archive - All Posts
+permalink: /archive/
 ---
 
 # Archive - All Posts
