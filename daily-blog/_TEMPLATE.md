@@ -1,3 +1,12 @@
+---
+layout: post
+title: "Daily AI Dev Tweet Brief — YYYY-MM-DD"
+date: YYYY-MM-DD 09:00:00 -0800
+author: Aaron Henningsgaard
+image: /assets/images/YYYY-MM-DD/hero.svg
+image_alt: "AI Development Pulse for YYYY-MM-DD"
+---
+
 # Daily AI Dev Tweet Brief — YYYY-MM-DD
 
 ## What mattered in the last 24–48h

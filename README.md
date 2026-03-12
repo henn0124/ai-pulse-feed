@@ -31,6 +31,8 @@ date: 2026-03-10 12:00:00 -0800
 author: Aaron Henningsgaard
 tags: [AI development, coding agents, specific-topics]
 excerpt: "Brief description of the post for RSS feeds and previews."
+image: /assets/images/YYYY-MM-DD/hero.svg
+image_alt: "Short descriptive alt text for accessibility"
 ---
 
 Your markdown content here...
