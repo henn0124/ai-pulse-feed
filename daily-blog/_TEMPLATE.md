@@ -3,11 +3,17 @@ layout: post
 title: "Daily AI Dev Tweet Brief — YYYY-MM-DD"
 date: YYYY-MM-DD 09:00:00 -0800
 author: Aaron Henningsgaard
+tags: [AI development, daily brief]
+excerpt: "One-line summary of the day’s most important AI dev signals."
 image: /assets/images/YYYY-MM-DD/hero.svg
-image_alt: "AI Development Pulse for YYYY-MM-DD"
+image_alt: "Hero illustration for AI Development Pulse on YYYY-MM-DD"
+social_image: /assets/images/YYYY-MM-DD/social-card.svg
 ---
 
 # Daily AI Dev Tweet Brief — YYYY-MM-DD
+
+![Hero image describing today’s key AI development themes](/assets/images/YYYY-MM-DD/hero.svg)
+*Hero image: one visual summary of the day’s biggest shift.*
 
 ## What mattered in the last 24–48h
 
@@ -18,6 +24,9 @@ image_alt: "AI Development Pulse for YYYY-MM-DD"
 ## Insight
 
 One paragraph synthesis of what changed and why it matters.
+
+![Inline diagram showing architecture or workflow referenced above](/assets/images/YYYY-MM-DD/inline-01.svg)
+*Inline visual: architecture, workflow, or trend chart tied directly to the insight section.*
 
 ## Follow Candidates (daily intake)
 

@@ -5,7 +5,13 @@ date: 2026-03-10 09:00:00 -0800
 author: Aaron Henningsgaard
 tags: [AI development, infrastructure automation, decentralized AI, InsForge, multi-agent systems]
 excerpt: "Infrastructure automation reaches new heights as InsForge 2.0 lets AI agents deploy full backends autonomously, while decentralized AI networks challenge centralized providers."
+image: /assets/images/2026-03-10/hero.svg
+image_alt: "AI agents orchestrating cloud infrastructure and deployment pipelines"
+social_image: /assets/images/2026-03-10/social-card.svg
 ---
+
+![Hero image of AI agents automating infrastructure workflows](/assets/images/2026-03-10/hero.svg)
+*Hero image: AI infrastructure automation across provisioning, deployment, and monitoring.*
 
 ## The Infrastructure Automation Breakthrough
 
@@ -13,13 +19,16 @@ InsForge 2.0 represents a paradigm shift in AI-assisted development - coding age
 
 The implications are staggering: what once required DevOps expertise and hours of configuration now happens automatically as AI agents understand infrastructure requirements from code context. Early adopters report development velocity increases of 3-5x for new projects.
 
-## Decentralized AI Infrastructure Emerges  
+## Decentralized AI Infrastructure Emerges
 
 The centralized AI paradigm is facing serious challenges as decentralized alternatives gain traction. Two key developments stand out:
 
 **0G Labs Network**: Building infrastructure where AI workloads run across distributed nodes rather than centralized providers. This enables more open innovation, verifiable computation, and permissionless development - critical for AI applications that require trust and transparency.
 
 **DGrid AI within PermawebDAO**: Takes decentralization further by distributing machine learning workloads across a censorship-resistant computing layer. The goal is AI that belongs to the network rather than any single corporation, addressing growing concerns about AI monopolization.
+
+![Inline visual comparing centralized vs decentralized AI infrastructure](/assets/images/2026-03-10/inline-01.svg)
+*Inline visual: centralized provider model vs distributed AI network architecture.*
 
 ## The Data Permanence Problem
 
@@ -32,7 +41,7 @@ Permanent data storage solutions are becoming essential infrastructure for relia
 Hackathon-winning Claude setups and multi-agent development workflows are now mainstream. The pattern that's emerging:
 
 - **Loop automation**: Agents that continuously monitor and improve codebases
-- **Parallel processing**: Multiple agents working on different aspects simultaneously  
+- **Parallel processing**: Multiple agents working on different aspects simultaneously
 - **Specialized roles**: Distinct agents for coding, testing, deployment, and monitoring
 
 BioClaw exemplifies this trend with 40 MCPs and 120+ skills targeting biomedical science, drug development, genomics, and clinical research. The multi-agent parallelism enables tackling complex scientific problems that would overwhelm single-agent systems.
@@ -43,7 +52,7 @@ Nearly every breakthrough mentioned today is open-source, from InsForge 2.0's in
 
 The open-source approach enables:
 - Rapid iteration and community contributions
-- Transparency in AI development processes  
+- Transparency in AI development processes
 - Reduced vendor lock-in for critical infrastructure
 - Democratic access to advanced AI development tools
 
