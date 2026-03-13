@@ -19,7 +19,7 @@ social_image: /assets/images/YYYY-MM-DD/social-card.png
 
 2–4 lines on what changed in the last 24–48h and why it matters.
 
-## Insight 1 — [Short chunk title]
+## [Short chunk title]
 
 **Crowd signal:** What multiple builders/operators are saying right now ([source](https://x.com/.../status/...); [source](https://x.com/.../status/...)).
 
@@ -27,7 +27,7 @@ social_image: /assets/images/YYYY-MM-DD/social-card.png
 
 **Our take:** Our own conclusion, implication, or prediction.
 
-## Insight 2 — [Short chunk title]
+## [Short chunk title]
 
 **Crowd signal:** Summary + inline references ([source](https://x.com/.../status/...)).
 
@@ -35,7 +35,7 @@ social_image: /assets/images/YYYY-MM-DD/social-card.png
 
 **Our take:** Clear point of view and practical implication.
 
-## Insight 3 — [Short chunk title]
+## [Short chunk title]
 
 **Crowd signal:** Summary + inline references.
 
@@ -43,11 +43,11 @@ social_image: /assets/images/YYYY-MM-DD/social-card.png
 
 **Our take:** What teams should do next.
 
-## Insight 4 (optional) — [Short chunk title]
+## [Short chunk title] (optional)
 
 Same pattern as above. Chunks can be related or independent.
 
-## Insight 5 (optional) — [Short chunk title]
+## [Short chunk title] (optional)
 
 Same pattern as above. Keep each chunk concise and skimmable.
 
