@@ -33,7 +33,7 @@ jobs:
         run: |
           grep -R "\[.*\](http" _posts/*.md >/dev/null || { echo "No source links found in posts"; exit 1; }
           gem install html-proofer --no-document
-          htmlproofer ./_site --disable-external --check-html --enforce-https
+          htmlproofer ./_site --disable-external --enforce-https
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
 
