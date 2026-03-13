@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Social card for March 10 AI Development post</title>
+  <desc id="desc">Promotional social preview card with post title and theme.</desc>
+  <rect width="1200" height="630" fill="#111827"/>
+  <text x="70" y="180" fill="#93c5fd" font-size="34" font-family="Arial, sans-serif">AI Development Pulse</text>
+  <text x="70" y="260" fill="#f8fafc" font-size="58" font-family="Arial, sans-serif" font-weight="700">Infrastructure Revolution</text>
+  <text x="70" y="330" fill="#f8fafc" font-size="58" font-family="Arial, sans-serif" font-weight="700">March 10, 2026</text>
+  <text x="70" y="420" fill="#cbd5e1" font-size="30" font-family="Arial, sans-serif">InsForge 2.0 • Decentralized AI • Multi-agent systems</text>
+</svg>
