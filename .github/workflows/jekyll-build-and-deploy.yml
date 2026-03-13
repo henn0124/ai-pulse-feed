@@ -10,8 +10,9 @@ on:
       - 'index.md'
       - 'archive.md'
       - 'Gemfile'
+      - 'assets/images/**'
+      - 'scripts/render-blog-images.sh'
   schedule:
-    # Run daily at 3 PM UTC to check for new posts
     - cron: '0 15 * * *'
   workflow_dispatch:
 
@@ -22,40 +23,43 @@ jobs:
       contents: read
       pages: write
       id-token: write
-      
-    steps:
-    - name: Checkout
-      uses: actions/checkout@v4
-      
-    - name: Setup Ruby
-      uses: ruby/setup-ruby@v1
-      with:
-        ruby-version: '3.1'
-        bundler-cache: true
-        
-    - name: Install dependencies
-      run: |
-        bundle install
-        
-    - name: Build Jekyll site (strict)
-      run: |
-        bundle exec jekyll build --strict_front_matter --destination ./_site
 
-    - name: Markdown + link reliability checks
-      run: |
-        # Ensure markdown files with links are well-formed enough for basic parsing
-        grep -R "\[.*\](http" _posts/*.md >/dev/null || { echo "No source links found in posts"; exit 1; }
-        gem install html-proofer --no-document
-        htmlproofer ./_site --disable-external --enforce-https
-        
-    - name: Setup Pages
-      uses: actions/configure-pages@v4
-      
-    - name: Upload artifact
-      uses: actions/upload-pages-artifact@v3
-      with:
-        path: ./_site
-        
-    - name: Deploy to GitHub Pages
-      id: deployment
-      uses: actions/deploy-pages@v4
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.1'
+          bundler-cache: true
+
+      - name: Install dependencies
+        run: bundle install
+
+      - name: Install SVG renderer
+        run: sudo apt-get update && sudo apt-get install -y librsvg2-bin
+
+      - name: Render blog images (SVG -> PNG)
+        run: bash scripts/render-blog-images.sh
+
+      - name: Build Jekyll site (strict)
+        run: bundle exec jekyll build --strict_front_matter --destination ./_site
+
+      - name: Markdown + link reliability checks
+        run: |
+          grep -R "\[.*\](http" _posts/*.md >/dev/null || { echo "No source links found in posts"; exit 1; }
+          gem install html-proofer --no-document
+          htmlproofer ./_site --disable-external --enforce-https
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./_site
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

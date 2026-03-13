@@ -27,6 +27,10 @@ jobs:
           bundler-cache: true
       - name: Setup Pages
         uses: actions/configure-pages@v5
+      - name: Install SVG renderer
+        run: sudo apt-get update && sudo apt-get install -y librsvg2-bin
+      - name: Render blog images (SVG -> PNG)
+        run: bash scripts/render-blog-images.sh
       - name: Build with Jekyll (strict)
         run: bundle exec jekyll build --strict_front_matter --destination ./_site
       - name: Markdown + link reliability checks

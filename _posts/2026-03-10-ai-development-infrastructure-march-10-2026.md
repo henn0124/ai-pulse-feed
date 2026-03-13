@@ -5,12 +5,12 @@ date: 2026-03-10 09:00:00 -0800
 author: Aaron Henningsgaard
 tags: [AI development, infrastructure automation, decentralized AI, InsForge, multi-agent systems]
 excerpt: "Infrastructure automation reaches new heights as InsForge 2.0 lets AI agents deploy full backends autonomously, while decentralized AI networks challenge centralized providers."
-image: /assets/images/2026-03-10/hero.svg
+image: /assets/images/2026-03-10/hero.png
 image_alt: "AI agents orchestrating cloud infrastructure and deployment pipelines"
-social_image: /assets/images/2026-03-10/social-card.svg
+social_image: /assets/images/2026-03-10/social-card.png
 ---
 
-![Hero image of AI agents automating infrastructure workflows](/assets/images/2026-03-10/hero.svg)
+![Hero image of AI agents automating infrastructure workflows](/assets/images/2026-03-10/hero.png)
 *Hero image: AI infrastructure automation across provisioning, deployment, and monitoring.*
 
 ## The Infrastructure Automation Breakthrough
@@ -27,7 +27,7 @@ The centralized AI paradigm is facing serious challenges as decentralized altern
 
 **DGrid AI within PermawebDAO**: Takes decentralization further by distributing machine learning workloads across a censorship-resistant computing layer. The goal is AI that belongs to the network rather than any single corporation, addressing growing concerns about AI monopolization.
 
-![Inline visual comparing centralized vs decentralized AI infrastructure](/assets/images/2026-03-10/inline-01.svg)
+![Inline visual comparing centralized vs decentralized AI infrastructure](/assets/images/2026-03-10/inline-01.png)
 *Inline visual: centralized provider model vs distributed AI network architecture.*
 
 ## The Data Permanence Problem
