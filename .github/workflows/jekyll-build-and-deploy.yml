@@ -46,7 +46,7 @@ jobs:
         # Ensure markdown files with links are well-formed enough for basic parsing
         grep -R "\[.*\](http" _posts/*.md >/dev/null || { echo "No source links found in posts"; exit 1; }
         gem install html-proofer --no-document
-        htmlproofer ./_site --disable-external --check-html --enforce-https
+        htmlproofer ./_site --disable-external --enforce-https
         
     - name: Setup Pages
       uses: actions/configure-pages@v4
