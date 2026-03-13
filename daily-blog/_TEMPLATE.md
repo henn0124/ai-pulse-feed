@@ -1,46 +1,63 @@
 ---
 layout: post
-title: "Daily AI Dev Tweet Brief — YYYY-MM-DD"
+title: "AI Development Pulse — YYYY-MM-DD"
 date: YYYY-MM-DD 09:00:00 -0800
 author: Aaron Henningsgaard
 tags: [AI development, daily brief]
-excerpt: "One-line summary of the day’s most important AI dev signals."
+excerpt: "A short daily narrative with 3–5 crowd-signal insights and our independent conclusions."
 image: /assets/images/YYYY-MM-DD/hero.png
 image_alt: "Hero illustration for AI Development Pulse on YYYY-MM-DD"
 social_image: /assets/images/YYYY-MM-DD/social-card.png
 ---
 
-# Daily AI Dev Tweet Brief — YYYY-MM-DD
+# AI Development Pulse — YYYY-MM-DD
 
 ![Hero image describing today’s key AI development themes](/assets/images/YYYY-MM-DD/hero.png)
-*Hero image: one visual summary of the day’s biggest shift.*
+*Hero image: one visual summary of the day’s biggest shifts.*
 
-## What mattered in the last 24–48h
+## Daily Thesis
 
-- Theme 1 summary with direct citations ([link 1](https://x.com/.../status/...), [link 2](https://x.com/.../status/...))
-- Theme 2 summary with direct citations ([link](https://x.com/.../status/...))
-- Theme 3 summary with direct citations ([link](https://x.com/.../status/...))
+2–4 lines on what changed in the last 24–48h and why it matters.
 
-## Insight
+## Insight 1 — [Short chunk title]
 
-One paragraph synthesis of what changed and why it matters.
+**Crowd signal:** What multiple builders/operators are saying right now ([source](https://x.com/.../status/...); [source](https://x.com/.../status/...)).
 
-![Inline diagram showing architecture or workflow referenced above](/assets/images/YYYY-MM-DD/inline-01.png)
-*Inline visual: architecture, workflow, or trend chart tied directly to the insight section.*
+**Pattern read:** What the aggregate signals imply.
 
-## Follow Candidates (daily intake)
+**Our take:** Our own conclusion, implication, or prediction.
 
-Add **1–2** accounts/day max.
+## Insight 2 — [Short chunk title]
 
-- **@handle** — why this account is high-signal
-  - Evidence: [post 1](https://x.com/.../status/...), [post 2](https://x.com/.../status/...)
-  - Provisional score: _/10
-  - Action: `candidate` → `probation`
+**Crowd signal:** Summary + inline references ([source](https://x.com/.../status/...)).
 
-## Accounts monitored
+**Pattern read:** Interpretation from the broader signal, not one person.
 
-Tier 1 core:
-@karpathy · @cursor_ai · @simonw · @milan_milanovic
+**Our take:** Clear point of view and practical implication.
 
-Tier 2 watchlist:
-(list from tracker)
+## Insight 3 — [Short chunk title]
+
+**Crowd signal:** Summary + inline references.
+
+**Pattern read:** What appears to be changing underneath the noise.
+
+**Our take:** What teams should do next.
+
+## Insight 4 (optional) — [Short chunk title]
+
+Same pattern as above. Chunks can be related or independent.
+
+## Insight 5 (optional) — [Short chunk title]
+
+Same pattern as above. Keep each chunk concise and skimmable.
+
+## Continuity Note
+
+How today’s insights build on, revise, or contradict previous themes.
+
+## Source Trail (optional roll-up)
+
+Use this only if a compact end list improves readability. Inline citations are the default.
+
+- [Primary source](https://...)
+- [Primary source](https://...)
