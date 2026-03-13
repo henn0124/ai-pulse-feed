@@ -5,14 +5,14 @@ date: YYYY-MM-DD 09:00:00 -0800
 author: Aaron Henningsgaard
 tags: [AI development, daily brief]
 excerpt: "One-line summary of the day’s most important AI dev signals."
-image: /assets/images/YYYY-MM-DD/hero.svg
+image: /assets/images/YYYY-MM-DD/hero.png
 image_alt: "Hero illustration for AI Development Pulse on YYYY-MM-DD"
-social_image: /assets/images/YYYY-MM-DD/social-card.svg
+social_image: /assets/images/YYYY-MM-DD/social-card.png
 ---
 
 # Daily AI Dev Tweet Brief — YYYY-MM-DD
 
-![Hero image describing today’s key AI development themes](/assets/images/YYYY-MM-DD/hero.svg)
+![Hero image describing today’s key AI development themes](/assets/images/YYYY-MM-DD/hero.png)
 *Hero image: one visual summary of the day’s biggest shift.*
 
 ## What mattered in the last 24–48h
@@ -25,7 +25,7 @@ social_image: /assets/images/YYYY-MM-DD/social-card.svg
 
 One paragraph synthesis of what changed and why it matters.
 
-![Inline diagram showing architecture or workflow referenced above](/assets/images/YYYY-MM-DD/inline-01.svg)
+![Inline diagram showing architecture or workflow referenced above](/assets/images/YYYY-MM-DD/inline-01.png)
 *Inline visual: architecture, workflow, or trend chart tied directly to the insight section.*
 
 ## Follow Candidates (daily intake)
