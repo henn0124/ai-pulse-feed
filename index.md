@@ -9,6 +9,16 @@ title: AI Development Pulse - Daily Insights from the Trenches
 
 ---
 
+## Mission
+
+AI Development Pulse exists to make fast-moving AI engineering legible. Every day, we scan a wide field of technical signals, then turn that noise into clear, independent judgment for builders. We cite broadly, but we do not outsource our thinking. The goal is simple: help teams understand what is actually changing, why it matters now, and where to place smart bets next.
+
+## Vision
+
+We’re building a daily intelligence layer for software teams navigating the AI transition—a publication that values signal over personalities, synthesis over hot takes, and practical direction over hype. Over time, this should become a trusted operating companion: a steady read that helps engineers, product leaders, and founders make better decisions as tools, models, and workflows evolve.
+
+---
+
 ## Recent Posts
 
 {% for post in site.posts limit: 5 %}
@@ -38,22 +48,6 @@ title: AI Development Pulse - Daily Insights from the Trenches
 
 <hr style="margin: 40px 0; border: none; border-top: 1px solid #ecf0f1;">
 {% endfor %}
-
-## About This Blog
-
-This blog tracks the rapid evolution of AI development tools and practices through daily analysis of insights from leading practitioners. I follow the key voices in the space - from Andrej Karpathy's research experiments to Cursor's production deployments - to identify the patterns and shifts that matter.
-
-**What you'll find here:**
-- Daily analysis of AI development trends
-- Practical insights from real-world AI tool usage  
-- Early signals of important shifts in the field
-- Critical analysis of new capabilities and limitations
-
-**Focus areas:**
-- Coding agents and autonomous development
-- Multi-agent systems and orchestration
-- Production AI reliability and governance
-- The human-AI collaboration frontier
 
 ---
 
