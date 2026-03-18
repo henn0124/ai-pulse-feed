@@ -41,9 +41,11 @@ Expand this slightly with 2–3 concrete falsifiers or failure conditions. This 
 
 ## Builder Action Block
 
-- **Do now (this week):**
-- **Watch next (1–2 weeks):**
-- **Ignore for now:**
+- **Do now (this week):** Name one concrete workflow to pilot, with owner + guardrails.
+- **Watch next (1–2 weeks):** Name the exact artifacts/signals you will monitor.
+- **Reference stack (required):** Include 3–6 specific tools, GitHub repos, or implementation references.
+- **Success criteria (required):** Include measurable outcomes (e.g., cycle time, defect escape, rollback rate).
+- **Ignore for now:** State what not to optimize yet.
 
 ## Bottom Line
 

@@ -33,8 +33,14 @@ This argument breaks if these signals do not translate into measurable delivery 
 
 ## Builder Action Block
 
-- **Do now (this week):** Define one bounded background-agent workflow with explicit guardrails (scope, approvals, rollback path).
-- **Watch next (1–2 weeks):** Look for orchestration patterns in real artifacts (postmortems, release notes, operating docs), not just threads.
+- **Do now (this week):** Pilot one bounded background-agent workflow (for example, dependency + security triage) with explicit guardrails: approval checkpoints, rollback path, and owner on-call.
+- **Watch next (1–2 weeks):** Track whether orchestration practices show up in durable team artifacts: PR templates, incident postmortems, and release checklists.
+- **Reference stack (tools/repos to benchmark):**
+  - Cursor’s always-on security and template workflows ([security agents](https://x.com/cursor_ai/status/2033595658951930073), [templates](https://x.com/cursor_ai/status/2033595661191680046))
+  - Simon Willison’s subagent implementation notes ([thread](https://x.com/simonw/status/2033545679491236149))
+  - LangGraph for explicit multi-step orchestration patterns: [github.com/langchain-ai/langgraph](https://github.com/langchain-ai/langgraph)
+  - SWE-bench as a shared quality bar for coding-agent performance: [github.com/SWE-bench/SWE-bench](https://github.com/SWE-bench/SWE-bench)
+- **Success criteria (minimum):** 15–20% cycle-time improvement on the targeted workflow with no increase in rollback rate or escaped defects.
 - **Ignore for now:** Chasing minor benchmark deltas without workflow-level evaluation tied to your delivery system.
 
 ## Bottom Line
