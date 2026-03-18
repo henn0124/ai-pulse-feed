@@ -40,8 +40,8 @@ This argument breaks if these signals do not translate into measurable delivery 
   - Simon Willison’s subagent implementation notes ([thread](https://x.com/simonw/status/2033545679491236149))
   - LangGraph for explicit multi-step orchestration patterns: [github.com/langchain-ai/langgraph](https://github.com/langchain-ai/langgraph)
   - SWE-bench as a shared quality bar for coding-agent performance: [github.com/SWE-bench/SWE-bench](https://github.com/SWE-bench/SWE-bench)
-- **Success criteria (minimum):** 15–20% cycle-time improvement on the targeted workflow with no increase in rollback rate or escaped defects.
-- **Ignore for now:** Chasing minor benchmark deltas without workflow-level evaluation tied to your delivery system.
+- **Success criteria (pilot gate, 14 days):** On the "dependency + security triage" workflow, compare days 1-7 (baseline) vs days 8-14 (pilot): median time-to-merge improves by >=10%, rollback count remains at 0, and escaped defects remain <= baseline count for the same issue class.
+- **Ignore for now (explicitly deferred for this pilot):** model leaderboard changes, prompt-style rewrites, and net-new agent frameworks not already in the reference stack.
 
 ## Bottom Line
 

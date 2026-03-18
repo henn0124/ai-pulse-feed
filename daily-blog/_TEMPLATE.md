@@ -44,8 +44,8 @@ Expand this slightly with 2–3 concrete falsifiers or failure conditions. This 
 - **Do now (this week):** Name one concrete workflow to pilot, with owner + guardrails.
 - **Watch next (1–2 weeks):** Name the exact artifacts/signals you will monitor.
 - **Reference stack (required):** Include 3–6 specific tools, GitHub repos, or implementation references.
-- **Success criteria (required):** Include measurable outcomes (e.g., cycle time, defect escape, rollback rate).
-- **Ignore for now:** State what not to optimize yet.
+- **Success criteria (required):** Use named metrics with exact thresholds and a time window (e.g., "over 14 days, median time-to-merge improves >=10%, rollbacks = 0, escaped defects <= baseline"). Avoid ranges like "15-20%" unless justified.
+- **Ignore for now (required):** List 2-4 explicitly deferred items by name (not generic phrasing).
 
 ## Bottom Line
 
