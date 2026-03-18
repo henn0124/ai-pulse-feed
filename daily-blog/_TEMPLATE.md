@@ -4,7 +4,7 @@ title: "AI Development Pulse — YYYY-MM-DD"
 date: YYYY-MM-DD 09:00:00 -0800
 author: Aaron Henningsgaard
 tags: [AI development, daily brief]
-excerpt: "A short daily narrative with 3–5 crowd-signal insights and our independent conclusions."
+excerpt: "A durable argument built from current AI development signals, with independent conclusions and explicit falsifiability."
 image: /assets/images/YYYY-MM-DD/hero.png
 image_alt: "Hero illustration for AI Development Pulse on YYYY-MM-DD"
 social_image: /assets/images/YYYY-MM-DD/social-card.png
@@ -15,45 +15,39 @@ social_image: /assets/images/YYYY-MM-DD/social-card.png
 ![Hero image describing today’s key AI development themes](/assets/images/YYYY-MM-DD/hero.png)
 *Hero image: one visual summary of the day’s biggest shifts.*
 
-## Daily Thesis
+## Core Argument
 
-2–4 lines on what changed in the last 24–48h and why it matters.
+Open with the durable idea first (2–4 lines). Do not use “since yesterday” framing in the structure. The date in metadata is enough.
 
-## [Short chunk title]
+## Argument Arc
 
-**Crowd signal:** What multiple builders/operators are saying right now ([source](https://x.com/.../status/...); [source](https://x.com/.../status/...)).
+Write this as flowing prose across three paragraphs (not Layer 1/2/3 headers):
 
-**Pattern read:** What the aggregate signals imply.
+1. **Tooling maturity** → show concrete evidence with inline citations.
+2. **Team/orchestration implications** → explain what new coordination patterns emerge.
+3. **Reliability constraint** → show why trustworthiness and operations become the bottleneck.
 
-**Our take:** Our own conclusion, implication, or prediction.
+Use current examples as illustrations, not the load-bearing logic.
 
-## [Short chunk title]
+## Claim Strength Ledger
 
-**Crowd signal:** Summary + inline references ([source](https://x.com/.../status/...)).
+- **Verified**
+- **Supported**
+- **Hypothesis**
 
-**Pattern read:** Interpretation from the broader signal, not one person.
+## What Could Make This Wrong
 
-**Our take:** Clear point of view and practical implication.
+Expand this slightly with 2–3 concrete falsifiers or failure conditions. This is required.
 
-## [Short chunk title]
+## Builder Action Block
 
-**Crowd signal:** Summary + inline references.
+- **Do now (this week):**
+- **Watch next (1–2 weeks):**
+- **Ignore for now:**
 
-**Pattern read:** What appears to be changing underneath the noise.
+## Bottom Line
 
-**Our take:** What teams should do next.
-
-## [Short chunk title] (optional)
-
-Same pattern as above. Chunks can be related or independent.
-
-## [Short chunk title] (optional)
-
-Same pattern as above. Keep each chunk concise and skimmable.
-
-## Continuity Note
-
-How today’s insights build on, revise, or contradict previous themes.
+Do not recap. Push the argument one step further and name the lens/heuristic the reader can reuse.
 
 ## Source Trail (optional roll-up)
 
