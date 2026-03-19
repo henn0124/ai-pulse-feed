@@ -11,7 +11,8 @@ on:
       - 'archive.md'
       - 'Gemfile'
       - 'assets/images/**'
-      - 'scripts/render-blog-images.sh'
+      - 'scripts/**'
+      - 'daily-blog/quality-checks/**'
   schedule:
     - cron: '0 14 * * *'
   workflow_dispatch:
@@ -27,6 +28,22 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Enforce daily post validator (push only)
+        if: github.event_name == 'push'
+        run: |
+          set -euo pipefail
+          CHANGED=$(git diff --name-only "${{ github.event.before }}" "${{ github.sha }}" | grep '^_posts/.*\.md$' || true)
+          if [ -z "$CHANGED" ]; then
+            echo "No post files changed; skipping validator"
+            exit 0
+          fi
+          for f in $CHANGED; do
+            echo "Validating $f"
+            bash scripts/validate-post-v2.sh "$f"
+          done
 
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
