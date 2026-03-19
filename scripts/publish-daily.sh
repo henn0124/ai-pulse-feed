@@ -14,7 +14,7 @@ fi
 
 scripts/validate-post-v2.sh "$POST_FILE"
 
-git add "$POST_FILE" daily-blog/quality-checks/${TARGET_DATE}.md
+git add "$POST_FILE" "daily-blog/quality-checks/${TARGET_DATE}.md"
 if [[ -d "assets/images/${TARGET_DATE}" ]]; then
   git add "assets/images/${TARGET_DATE}" || true
 fi
@@ -26,5 +26,10 @@ fi
 
 git commit -m "Publish daily post for ${TARGET_DATE}"
 git push origin master
+
+# local hygiene cleanup (temp/rebuildable only)
+if [[ -x scripts/cleanup-blog-workspace.sh ]]; then
+  scripts/cleanup-blog-workspace.sh --apply || true
+fi
 
 echo "✅ Published ${POST_FILE}"
