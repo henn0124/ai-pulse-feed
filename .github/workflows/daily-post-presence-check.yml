@@ -1,0 +1,84 @@
+name: Daily Post Presence Check
+
+on:
+  schedule:
+    # 6:20 AM Pacific during DST (13:20 UTC), 5:20 AM PST in winter
+    # intentionally early warning to catch misses quickly
+    - cron: '20 13 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  check-daily-post:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Check for today's post
+        id: check
+        run: |
+          set -euo pipefail
+          TODAY_UTC="$(date -u +%Y-%m-%d)"
+          TODAY_PT="$(TZ=America/Los_Angeles date +%Y-%m-%d)"
+
+          echo "today_utc=$TODAY_UTC" >> "$GITHUB_OUTPUT"
+          echo "today_pt=$TODAY_PT" >> "$GITHUB_OUTPUT"
+
+          if ls _posts/${TODAY_PT}*.md >/dev/null 2>&1; then
+            echo "exists=true" >> "$GITHUB_OUTPUT"
+            echo "✅ Daily post exists for $TODAY_PT"
+          else
+            echo "exists=false" >> "$GITHUB_OUTPUT"
+            echo "❌ Missing daily post for $TODAY_PT"
+          fi
+
+      - name: Open issue when daily post is missing
+        if: steps.check.outputs.exists == 'false'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const todayPt = '${{ steps.check.outputs.today_pt }}';
+            const title = `Missing daily post for ${todayPt}`;
+            const owner = context.repo.owner;
+            const repo = context.repo.repo;
+
+            const { data: existing } = await github.rest.issues.listForRepo({
+              owner,
+              repo,
+              state: 'open',
+              labels: 'daily-post-missing',
+              per_page: 100
+            });
+
+            const duplicate = existing.find(i => i.title === title);
+            if (duplicate) {
+              core.info(`Issue already open: #${duplicate.number}`);
+              return;
+            }
+
+            await github.rest.issues.create({
+              owner,
+              repo,
+              title,
+              labels: ['daily-post-missing', 'automation'],
+              body: [
+                `Daily post is missing for **${todayPt}**.`,
+                '',
+                'Checklist:',
+                '- [ ] Generate draft',
+                '- [ ] Run rubric v2 quality check (>=25/30, no category <4)',
+                '- [ ] Publish and verify permalink returns HTTP 200',
+                '',
+                `Triggered by workflow run: https://github.com/${owner}/${repo}/actions/runs/${context.runId}`
+              ].join('\n')
+            });
+
+      - name: Fail when missing
+        if: steps.check.outputs.exists == 'false'
+        run: |
+          echo "Daily post missing for ${{ steps.check.outputs.today_pt }}"
+          exit 1
