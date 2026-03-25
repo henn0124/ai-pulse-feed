@@ -10,7 +10,10 @@ Run all publishing from this repo only:
 cd /workspace/ai-pulse-feed
 scripts/validate-post-v2.sh _posts/YYYY-MM-DD-your-slug.md
 scripts/publish-daily.sh YYYY-MM-DD
+node scripts/prepare-slack-share.js YYYY-MM-DD "Fresh daily headline"
 ```
+
+**Hard rule:** never send a “Done” delivery update (or Slack share) until `prepare-slack-share.js` passes and returns a hyperlink payload.
 
 ### Required quality gate file
 Before publish, create:
