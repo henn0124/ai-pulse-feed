@@ -20,12 +20,12 @@ In the last 24–48 hours, Tier 1 AI voices converged on one practical shift: **
 ## Claim Strength Ledger
 
 - **Verified**
-  - Cursor real-time RL shipping cadence signal ([source](https://x.com/cursor_ai/status/2037205514975629493)).
-  - Cursor self-hosted cloud-agent positioning for enterprise environments ([source](https://x.com/cursor_ai/status/2036873885665419773)).
-  - Karpathy on agent-native DevOps constraints and memory relevance issues ([source 1](https://x.com/karpathy/status/2037200624450936940), [source 2](https://x.com/karpathy/status/2036836816654147718)).
-  - Simon Willison on autoresearch jailbreak pressure ([source](https://x.com/simonw/status/2037237161049948644)).
+  - Cursor real-time RL shipping cadence signal ([Cursor update](https://x.com/cursor_ai/status/2037205514975629493)).
+  - Cursor self-hosted cloud-agent positioning for enterprise environments ([Cursor update](https://x.com/cursor_ai/status/2036873885665419773)).
+  - Karpathy on agent-native DevOps constraints and memory relevance issues ([Karpathy thread: delivery stack](https://x.com/karpathy/status/2037200624450936940), [Karpathy thread: memory relevance](https://x.com/karpathy/status/2036836816654147718)).
+  - Simon Willison on autoresearch jailbreak pressure ([Simon Willison note](https://x.com/simonw/status/2037237161049948644)).
 - **Supported**
-  - Milan’s reliability/safety discourse indicates trust constraints are already shaping deployment appetite ([source 1](https://x.com/milan_milanovic/status/2037462609880912350), [source 2](https://x.com/milan_milanovic/status/2037515284634878126), [source 3](https://x.com/milan_milanovic/status/2037197898526433789)).
+  - Milan’s reliability/safety discourse indicates trust constraints are already shaping deployment appetite ([Milan on outage risk](https://x.com/milan_milanovic/status/2037462609880912350), [Milan on chatbot safety](https://x.com/milan_milanovic/status/2037515284634878126), [Milan on deployment risk](https://x.com/milan_milanovic/status/2037197898526433789)).
 - **Hypothesis**
   - Over the next quarter, top-performing teams will be the ones that compound **operational intelligence** (iteration cadence + secure execution + reliability + memory quality), not just base-model IQ.
 
