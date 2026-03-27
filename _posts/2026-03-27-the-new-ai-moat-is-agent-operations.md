@@ -11,21 +11,21 @@ In the last 24–48 hours, Tier 1 AI voices converged on one practical shift: **
 
 ## What’s New Since Yesterday
 
-- **Continuous post-training loops are becoming a product lever, not just a lab metric.** Cursor shared that real-time RL can ship Composer improvements roughly every five hours, signaling a tighter model-improvement cadence ([https://x.com/cursor_ai/status/2037205514975629493](https://x.com/cursor_ai/status/2037205514975629493)).
-- **Enterprise control requirements are tightening around agent deployment.** Cursor also highlighted self-hosted cloud agents, reinforcing demand for in-network execution and data boundary control ([https://x.com/cursor_ai/status/2036873885665419773](https://x.com/cursor_ai/status/2036873885665419773)).
-- **Agent-native delivery bottlenecks are now mostly operational.** Karpathy emphasized that real product delivery still hinges on auth, billing, infra, and deployment orchestration, and separately flagged memory drift/relevance problems in user-facing systems ([https://x.com/karpathy/status/2037200624450936940](https://x.com/karpathy/status/2037200624450936940), [https://x.com/karpathy/status/2036836816654147718](https://x.com/karpathy/status/2036836816654147718)).
-- **Safety pressure is accelerating through automated offense research.** Simon Willison amplified autoresearch jailbreak work as evidence that defensive posture must keep pace with automation ([https://x.com/simonw/status/2037237161049948644](https://x.com/simonw/status/2037237161049948644)).
-- **Reliability risk is now front-page in practitioner discourse.** Milan Milanović highlighted outage and chatbot-safety concerns as immediate constraints on trust and rollout velocity ([https://x.com/milan_milanovic/status/2037462609880912350](https://x.com/milan_milanovic/status/2037462609880912350), [https://x.com/milan_milanovic/status/2037515284634878126](https://x.com/milan_milanovic/status/2037515284634878126), [https://x.com/milan_milanovic/status/2037197898526433789](https://x.com/milan_milanovic/status/2037197898526433789)).
+- **Continuous post-training loops are becoming a product lever, not just a lab metric.** Cursor shared that real-time RL can ship Composer improvements roughly every five hours, signaling a tighter model-improvement cadence ([Cursor on real-time RL shipping cadence](https://x.com/cursor_ai/status/2037205514975629493)).
+- **Enterprise control requirements are tightening around agent deployment.** Cursor also highlighted self-hosted cloud agents, reinforcing demand for in-network execution and data boundary control ([Cursor on self-hosted cloud agents](https://x.com/cursor_ai/status/2036873885665419773)).
+- **Agent-native delivery bottlenecks are now mostly operational.** Karpathy emphasized that real product delivery still hinges on auth, billing, infra, and deployment orchestration, and separately flagged memory drift/relevance problems in user-facing systems ([Karpathy on agent-native delivery complexity](https://x.com/karpathy/status/2037200624450936940), [Karpathy on memory relevance drift](https://x.com/karpathy/status/2036836816654147718)).
+- **Safety pressure is accelerating through automated offense research.** Simon Willison amplified autoresearch jailbreak work as evidence that defensive posture must keep pace with automation ([Simon Willison on autoresearch jailbreak pressure](https://x.com/simonw/status/2037237161049948644)).
+- **Reliability risk is now front-page in practitioner discourse.** Milan Milanović highlighted outage and chatbot-safety concerns as immediate constraints on trust and rollout velocity ([Milan on reliability and outage risk](https://x.com/milan_milanovic/status/2037462609880912350), [Milan on chatbot safety concerns](https://x.com/milan_milanovic/status/2037515284634878126), [Milan on deployment risk signals](https://x.com/milan_milanovic/status/2037197898526433789)).
 
 ## Claim Strength Ledger
 
 - **Verified**
-  - Cursor real-time RL shipping cadence signal ([https://x.com/cursor_ai/status/2037205514975629493](https://x.com/cursor_ai/status/2037205514975629493)).
-  - Cursor self-hosted cloud-agent positioning for enterprise environments ([https://x.com/cursor_ai/status/2036873885665419773](https://x.com/cursor_ai/status/2036873885665419773)).
-  - Karpathy on agent-native DevOps constraints and memory relevance issues ([https://x.com/karpathy/status/2037200624450936940](https://x.com/karpathy/status/2037200624450936940), [https://x.com/karpathy/status/2036836816654147718](https://x.com/karpathy/status/2036836816654147718)).
-  - Simon Willison on autoresearch jailbreak pressure ([https://x.com/simonw/status/2037237161049948644](https://x.com/simonw/status/2037237161049948644)).
+  - Cursor real-time RL shipping cadence signal ([source](https://x.com/cursor_ai/status/2037205514975629493)).
+  - Cursor self-hosted cloud-agent positioning for enterprise environments ([source](https://x.com/cursor_ai/status/2036873885665419773)).
+  - Karpathy on agent-native DevOps constraints and memory relevance issues ([source 1](https://x.com/karpathy/status/2037200624450936940), [source 2](https://x.com/karpathy/status/2036836816654147718)).
+  - Simon Willison on autoresearch jailbreak pressure ([source](https://x.com/simonw/status/2037237161049948644)).
 - **Supported**
-  - Milan’s reliability/safety discourse indicates trust constraints are already shaping deployment appetite ([https://x.com/milan_milanovic/status/2037462609880912350](https://x.com/milan_milanovic/status/2037462609880912350), [https://x.com/milan_milanovic/status/2037515284634878126](https://x.com/milan_milanovic/status/2037515284634878126), [https://x.com/milan_milanovic/status/2037197898526433789](https://x.com/milan_milanovic/status/2037197898526433789)).
+  - Milan’s reliability/safety discourse indicates trust constraints are already shaping deployment appetite ([source 1](https://x.com/milan_milanovic/status/2037462609880912350), [source 2](https://x.com/milan_milanovic/status/2037515284634878126), [source 3](https://x.com/milan_milanovic/status/2037197898526433789)).
 - **Hypothesis**
   - Over the next quarter, top-performing teams will be the ones that compound **operational intelligence** (iteration cadence + secure execution + reliability + memory quality), not just base-model IQ.
 
@@ -38,14 +38,14 @@ If model providers deliver a large reliability step-change that abstracts away m
 - **Do now (this week):** Instrument agent workflows for rollback, memory hygiene, and failure budgets; make reliability and safety metrics first-class release criteria.
 - **Watch next (1–2 weeks):** Monitor whether vendors publish concrete safeguards around self-hosted agent execution, memory lifecycle controls, and rapid incident response loops.
 - **Reference stack (required):**
-  - https://x.com/cursor_ai/status/2037205514975629493
-  - https://x.com/cursor_ai/status/2036873885665419773
-  - https://x.com/karpathy/status/2037200624450936940
-  - https://x.com/karpathy/status/2036836816654147718
-  - https://x.com/simonw/status/2037237161049948644
-  - https://x.com/milan_milanovic/status/2037462609880912350
-  - https://x.com/milan_milanovic/status/2037515284634878126
-  - https://x.com/milan_milanovic/status/2037197898526433789
+  - [Cursor: real-time RL cadence](https://x.com/cursor_ai/status/2037205514975629493)
+  - [Cursor: self-hosted cloud agents](https://x.com/cursor_ai/status/2036873885665419773)
+  - [Karpathy: agent-native delivery constraints](https://x.com/karpathy/status/2037200624450936940)
+  - [Karpathy: memory relevance drift](https://x.com/karpathy/status/2036836816654147718)
+  - [Simon Willison: autoresearch jailbreak pressure](https://x.com/simonw/status/2037237161049948644)
+  - [Milan: reliability and outage risk](https://x.com/milan_milanovic/status/2037462609880912350)
+  - [Milan: chatbot safety concerns](https://x.com/milan_milanovic/status/2037515284634878126)
+  - [Milan: deployment risk signal](https://x.com/milan_milanovic/status/2037197898526433789)
 - **What success looks like (required):** Faster AI-assisted shipping with fewer trust-breaking incidents and measurable improvements in memory relevance, uptime, and containment.
 - **Ignore for now (required):** Capability claims that omit deployment controls, recovery posture, and production reliability evidence.
 
